@@ -1,0 +1,199 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+.cont {
+    /**scroll-snap-type: y mandatory;
+    overflow-y: scroll;**/
+    height: 100vh;
+}
+
+section {
+
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /**scroll-snap-align: start;**/
+}
+
+.one {
+    background-image: url(bg11.jpg);
+
+}
+
+/* DEMO-SPECIFIC STYLES */
+.typewriter h1 {
+    font-size: 4vw;
+    color: rgb(70, 70, 70);
+    font-family: 'Press Start 2P';
+    overflow: hidden;
+    text-align: center;
+    /* Ensures the content is not revealed until the animation */
+    border-right: .15em rgb(70, 70, 70);
+    /* The typwriter cursor */
+    white-space: nowrap;
+    /* Keeps the content on a single line */
+    margin: 0 auto;
+    /* Gives that scrolling effect as the typing happens */
+    letter-spacing: .15em;
+    /* Adjust as needed */
+    animation:
+        typing 4s steps(30, end),
+        blink-caret .5s step-end infinite;
+}
+
+
+/* The typing effect */
+@keyframes typing {
+    from {
+        width: 0
+    }
+
+    to {
+        width: 100%
+    }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+
+    from,
+    to {
+        border-color: transparent
+    }
+
+    50% {
+        border-color: #f2f2f2
+    }
+}
+
+.two {
+    background-image: url(bg2.jpg);
+}
+
+.three {
+    background-image: url(bg3.jpg);
+}
+
+.five {
+    position: relative;
+    background-color: #ffffff;
+}
+.five h1{
+position:absolute;
+top:20%;
+}
+
+.column {
+    text-align: center;
+    padding: 10px;
+}
+
+.left {
+    width: 35%;
+}
+
+.right {
+    width: 65%;
+}
+
+.hover-image-scale {
+    display: inline-block;
+
+}
+
+.hover-image-scale img {
+    transition: 1s;
+    /* time of effect */
+    display: block;
+    margin: 20px 20px 20px 20px;
+    text-align: justify;
+
+
+}
+
+@keyframes fade {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+
+
+.hover-image-scale img:hover {
+    transform: scale(1.2);
+    background: rgba(0, 0, 0, 0.5);
+    /* changing size */
+}
+
+.wrapper {
+    position:absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 350px;
+    width: 100%;
+    background: #fff;
+    padding: 25px;
+    border-radius: 5px;
+    box-shadow: 4px 4px 2px rgb(148, 148, 148);
+}
+
+.wrapper h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: #332902;
+}
+
+.wrapper .input_field {
+    margin-bottom: 10px;
+}
+
+.wrapper .input_field input[type="text"],
+.wrapper textarea {
+    border: 1px solid #737373;
+    width: 100%;
+    padding: 10px;
+}
+
+.wrapper textarea {
+    resize: none;
+    height: 80px;
+}
+
+.wrapper .btn input[type="submit"] {
+    border: 0px;
+    margin-top: 15px;
+    padding: 10px;
+    text-align: center;
+    width: 100%;
+    background: #74a5e4;
+    color: #332902;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    font-weight: bold;
+    border-radius: 25px;
+    cursor: pointer;
+}
+
+#error_message {
+    margin-bottom: 20px;
+    background: #f56469;
+    padding: 0px;
+    text-align: center;
+    font-size: 14px;
+    transition: all 0.5s ease;
+}
